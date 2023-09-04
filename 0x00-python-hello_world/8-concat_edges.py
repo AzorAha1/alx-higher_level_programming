@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-str = "object-oriented programming with Python"
+str = "Python is an interpreted, interactive, object-oriented programming with Python\
+    language that combines remarkable power with very clear syntax"
+str = str[39:78];
 print(str);
