@@ -1,2 +1,3 @@
 #!/bin/bash
+chmod u+rx run.py
 ./run.py
