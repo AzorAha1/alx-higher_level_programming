@@ -6,10 +6,13 @@ string = "Last digit of"
 longstr = "and is less than 6 and not 0"
 if lastdigit < 6 and lastdigit != 0:
     if number < 0:
-        print(f'{string} {number} is -{lastdigit} {longstr}')
+        lastdigit = -lastdigit
+        print(f'{string} {number} is {lastdigit} {longstr}')
+    elif number > 0:
+        print(f'{string} {number} is {lastdigit} {longstr}')
 elif lastdigit > 5:
     print(f'{string} {number} is {lastdigit} and is greater than 5')
 elif lastdigit == 0:
-    print(f'{string} {number } is {lastdigit} and is {lastdigit}')
+    print(f'{string} {number} is {lastdigit} and is {lastdigit}')
 else:
     print("Error")
