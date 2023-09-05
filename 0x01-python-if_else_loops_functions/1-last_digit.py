@@ -14,3 +14,5 @@ elif lastdigit > 5:
     print(f'{string} {number} is {lastdigit} and is greater than 5')
 elif lastdigit == 0:
     print(f'{string} is {lastdigit}')
+else:
+    print("Error")
