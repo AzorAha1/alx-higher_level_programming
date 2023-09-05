@@ -8,7 +8,7 @@ if lastdigit < 6 and lastdigit != 0:
     if number < 0:
         lastdigit = -lastdigit
         print(f'{string} {number} is {lastdigit} {longstr}')
-    elif number > 0:
+    else:
         print(f'{string} {number} is {lastdigit} {longstr}')
 elif lastdigit > 5:
     print(f'{string} {number} is {lastdigit} and is greater than 5')
