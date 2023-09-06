@@ -24,5 +24,5 @@ listint_t *insert_node(listint_t **head, int number)
 		}
 		add_nodeint_end(head, num);
 	}
-	return (*head);
+	return (newnode);
 }
