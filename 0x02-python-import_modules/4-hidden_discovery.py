@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import hidden_4 as hidden
-    for i in dir(hidden):
-        if not i.startswith("__"):
+    import importlib
+    string = dir(importlib.import_module("hidden_4"))
+    for i in string:
+        if not i.startswith("_"):
             print("{}".format(i))
