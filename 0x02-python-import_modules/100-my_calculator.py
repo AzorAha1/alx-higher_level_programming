@@ -4,6 +4,7 @@ if __name__ == "__main__":
     import sys
     args = sys.argv
     morethan3 = "Unknown operator. Available operators: +, -, * and /"
+    multiplicationsign = "*"
 
     if len(args) != 4:
         print("{}".format(morethan3))
