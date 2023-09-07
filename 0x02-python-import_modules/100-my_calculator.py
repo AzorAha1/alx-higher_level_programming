@@ -22,7 +22,7 @@ if __name__ == "__main__":
     elif operator == "/":
         print("{} / {} = {}".format(a, b, div(int(a), int(b))))
         exit(0)
-    elif operator == "*":
+    elif operator == "^":
         print("{} * {} = {}".format(a, b, mul(int(a), int(b))))
         exit(0)
     else:
