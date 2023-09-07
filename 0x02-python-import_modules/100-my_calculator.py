@@ -10,7 +10,7 @@ if __name__ == "__main__":
         exit(1)
     else:
         a = args[1]
-        b = args [3]
+        b = args[3]
         operator = args[2]
     if operator == "+":
         print("{} + {} = {}".format(a, b, add(int(a), int(b))))
@@ -27,4 +27,3 @@ if __name__ == "__main__":
     else:
         print(morethan3)
         exit(1)
-    
