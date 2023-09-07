@@ -3,7 +3,8 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     import sys
     args = sys.argv
-    morethan3 = "Unknown operator. Available operators: +, -, * and /"
+    wrongoperator = "Unknown operator. Available operators: +, -, * and /"
+    morethan3 = "Usage: ./100-my_calculator.py <a> <operator> <b>"
     multiplicationsign = "*"
 
     if len(args) != 4:
@@ -26,5 +27,5 @@ if __name__ == "__main__":
         print("{} * {} = {}".format(a, b, mul(int(a), int(b))))
         exit(0)
     else:
-        print("{}".format(morethan3))
+        print("{}".format(wrongoperator))
         exit(1)
