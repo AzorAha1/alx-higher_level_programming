@@ -2,4 +2,5 @@
 def element_at(my_list, idx):
     if idx < 1 and idx > len(my_list):
         return None
-    print("{}".format(my_list[idx]))
+    else:
+        return my_list[idx]
