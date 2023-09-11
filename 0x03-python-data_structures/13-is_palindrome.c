@@ -36,7 +36,7 @@ int is_palindrome(listint_t **head)
 			{
 				front = front->next;
 			}
-			for (j = 0; j < list_size - i - 1; j++)
+			for (j = 0; j < list_size - (i + 1); j++)
 			{
 				back = back->next;
 			}
