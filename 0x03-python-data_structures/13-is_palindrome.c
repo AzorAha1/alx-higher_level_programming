@@ -21,19 +21,26 @@ int is_palindrome(listint_t **head)
         list_size++;
     }
     int i, j;
-    listint_t *front, *back
-    for (i = 0; i < list_size / 2; i++)
+    listint_t *front, *back;
+    while(front != NULL && back != NULL)
     {
-        front = *head;
-        back = *head;
-        for (j = 0; j < i; j++)
+        for (i = 0; i < list_size / 2; i++)
         {
-            front = front->next;
-        }
-        for (j = 0; j < size(i + 1); j++)
-        {
-            back = back->next;
+            front = *head;
+            back = *head;
+            for (j = 0; j < i; j++)
+            {
+                front = front->next;
+            }
+            for (j = 0; j < list_size - i; j++)
+            {
+                back = back->next;
+            }
+            if (front->n != back->n)
+            {
+                return (0);
+            }
         }
     }
-
+    return (1);
 }
