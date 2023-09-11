@@ -4,6 +4,5 @@ def divisible_by_2(mylist=[]):
         return
     for item in mylist:
         if item % 2 == 0:
-            return True
-        else:
-            return False
+            return mylist.appe
+        return mylist.append(False)
