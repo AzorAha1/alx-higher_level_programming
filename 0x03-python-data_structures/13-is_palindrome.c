@@ -22,7 +22,7 @@ int is_palindrome(listint_t **head)
 		fast = fast->next->next;
 		slow = slow->next;
 	}
-	*back = NULL;
+	back = NULL;
 	while (slow)
 	{
 		listint_t *temp;
