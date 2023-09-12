@@ -14,4 +14,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
         x2, y2 = (0, 0)
     a = (x1 + x2)
     b = (y1 + y2)
-    return (int(a), int(b))
+    return (a, b)
