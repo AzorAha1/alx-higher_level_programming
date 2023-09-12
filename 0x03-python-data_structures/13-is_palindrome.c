@@ -41,9 +41,10 @@ int is_palindrome(listint_t **head)
 	{
 		if (left->n != right->n)
 		{
-			left = left->next
 			return (0);
 		}
+		left = left->next;
+		right = right->next;
 	}
 	return (1);
 }
