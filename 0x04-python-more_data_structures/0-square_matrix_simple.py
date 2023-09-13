@@ -6,5 +6,5 @@ def square_matrix_simple(matrix=[]):
         for eachvalue in row:
             squareeachvalue = eachvalue ** 2
             innermat.append(squareeachvalue)
-            output.append(innermat)
-        return output
+        output.append(innermat)
+    return output
