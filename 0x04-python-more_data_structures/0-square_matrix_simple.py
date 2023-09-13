@@ -2,7 +2,5 @@
 def square_matrix_simple(matrix=[]):
     if not matrix:
         return matrix
-    mat = []
-    for row in matrix:
-        mat.append(list(map(lambda i : i ** 2, row)))
-    return mat
+    output = [[i ** 2 for i in row] for row in matrix]
+    return output
