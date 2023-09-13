@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    if __name__ == "main":
-        return [[i ** 2 for i in row]for row in matrix]
+    mat = []
+    for row in matrix:
+        mat.append(list(map(lambda i : i ** 2, row)))
+    return mat
