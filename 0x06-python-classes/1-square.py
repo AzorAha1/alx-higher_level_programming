@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""class
-this is a class called square
+"""creating class
+    this class has a constructor
 """
 
+
 class Square:
-    """Square class
-    have private attribute called size
+    """Square
+        private instance attribute size
     """
-    ___size = None
-    pass
+    def __init__(self, __size):
+        self.__size = __size
