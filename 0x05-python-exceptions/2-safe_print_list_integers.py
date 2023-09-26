@@ -2,7 +2,7 @@
 def safe_print_list_integers(mylist=[], x=0):
     try:
         counter = 0
-        onlyint = lambda x: isinstance(x, int)
+        def onlyint(x): isinstance(x, int)
         printonlyint = list(filter(onlyint, mylist))
         [print("{:d}".format(i), end='') for i in printonlyint[:x]]
         print()
