@@ -8,5 +8,5 @@ def safe_print_integer_err(value):
         else:
             raise ValueError("Unknown format code 'd' for object of type 'str'")
     except Exception as e:
-        print("{}".format(e), file=sys.stderr)
+        print(f"Exception: {e}", file=sys.stderr)
         return False
