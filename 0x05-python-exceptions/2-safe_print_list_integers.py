@@ -6,14 +6,11 @@ def safe_print_list_integers(mylist=[], x=0):
         counter = 0
         printonlyint = list(filter(onlyint, mylist))
         for c in printonlyint:
-            counter+=1
+            counter += 1
         if x >= counter:
             x = counter
-        elif x > counter + 1:
-            raise IndexError("Error: list index out of range")
         [print("{:d}".format(i), end='') for i in printonlyint[:x]]
         print()
         return x
     except IndexError as e:
-        print(e)
-        
+        print("Error")
