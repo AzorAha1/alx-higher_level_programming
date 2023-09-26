@@ -7,4 +7,3 @@ class Square:
     square definition
     """
     pass
-        
