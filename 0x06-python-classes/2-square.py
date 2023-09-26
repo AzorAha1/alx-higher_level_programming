@@ -8,7 +8,7 @@ class Square:
     class
     """
     def __init__(self, size=0):
-        self.__Square__size = size
+        self.__size = size
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
