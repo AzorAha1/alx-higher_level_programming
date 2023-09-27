@@ -8,8 +8,8 @@ class Square:
     """square
     comment
     """
-    def __init__(self, size):
-        self.size = size
+    def __init__(self, __size):
+        self.__size = __size
 
     @property
     def size(self):
@@ -24,4 +24,4 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def area(self):
-        return self.__size ** 2
+        return self.size ** 2
