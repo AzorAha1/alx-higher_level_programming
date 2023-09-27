@@ -4,7 +4,7 @@ comment
 """
 
 class Square:
-    """Square
+    """square
     comment
     """
     def __init__(self, size=0):
