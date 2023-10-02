@@ -8,9 +8,9 @@ class Rectangle:
     """Rectangle
     class called Rectangle
     """
-    def __init__(self, __height, __width):
-        self.__height = __height
-        self.__width = __width
+    def __init__(self, height=0, width=0):
+        self.__height = height
+        self.__width = width
 
     @property
     def width(self):
