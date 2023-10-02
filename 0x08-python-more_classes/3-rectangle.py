@@ -52,5 +52,8 @@ class Rectangle:
             return ""
         string_rep = ""
         for i in range(self.__height):
-            string_rep = string_rep + '#' * self.__width + "\n"
+            for j in range(self.__width):
+                string_rep+="#"
+            if i < self.__height - 1:
+                string_rep += "\n"
         return string_rep
