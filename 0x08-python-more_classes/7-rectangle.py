@@ -10,6 +10,7 @@ class Rectangle:
     """
     number_of_instances = 0
     print_symbol = "#"
+
     def __init__(self, __width, __height):
         self.__width = __width
         self.__height = __height
@@ -61,7 +62,7 @@ class Rectangle:
         string_rep = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                string_rep += Rectangle.print_symbol
+                string_rep += str(self.print_symbol)
             if i < self.__height - 1:
                 string_rep += "\n"
         return string_rep
@@ -70,7 +71,7 @@ class Rectangle:
         string_rep = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                string_rep += Rectangle.print_symbol
+                string_rep += self.print_symbol
             if i < self.__height - 1:
                 string_rep += "\n"
-        return f'Rectangle({self.__width}, {self.__height})'
+            return f'Rectangle({self.__width}, {self.__height})'
