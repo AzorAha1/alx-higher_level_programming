@@ -11,7 +11,6 @@ class Rectangle:
     number_of_instances = 0
 
     def __init__(self, __width, __height):
-        Rectangle.number_of_instances += 1
         self.__width = __width
         self.__height = __height
 
@@ -46,6 +45,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     def area(self):
         return self.__height * self.__width
