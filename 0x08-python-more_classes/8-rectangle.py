@@ -75,19 +75,19 @@ class Rectangle:
             if i < self.__height - 1:
                 string_rep += "\n"
             return f'Rectangle({self.__width}, {self.__height})'
-    
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        if type(rect_1) != Rectangle:
+        if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-        elif type(rect_2) != Rectangle:
+        elif not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        rect_1 = Rectangle.area(rect_1)
-        rect_2 = Rectangle.area(rect_2)
+        area_rect_1 = rect_1.area()
+        area_rect_2 = rect_2.area()
 
-        if rect_1 > rect_2:
-            return rect_1
-        elif rect_2 > rect_1:
-            return rect_2
-        elif rect_1 == rect_2:
-            return rect_1
+        if area_rect_1 > area_rect_2:
+            return area_rect_1
+        elif area_rect_2 > area_rect_1:
+            return area_rect_2
+        else:
+            return area_rect_1
