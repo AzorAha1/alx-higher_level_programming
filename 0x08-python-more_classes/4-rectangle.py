@@ -58,6 +58,7 @@ class Rectangle:
             if i < self.__height - 1:
                 string_rep += "\n"
         return string_rep
+
     def __repr__(self):
         string_rep = ""
         for i in range(self.__height):
