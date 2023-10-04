@@ -4,3 +4,5 @@ Traceback (most recent call last):
 TypeError: text must be a string
 >>> text_indentation()
 empty
+>>> text_indentation("Holberton School")
+Holberton School
