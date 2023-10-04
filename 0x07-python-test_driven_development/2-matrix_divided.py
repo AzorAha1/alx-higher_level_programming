@@ -4,7 +4,7 @@
 """
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix = [], div=0):
     """matrix_divided
         matrix = the matrix
         div = what we are divided every element with
