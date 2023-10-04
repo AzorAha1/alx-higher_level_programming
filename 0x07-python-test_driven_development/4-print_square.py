@@ -4,7 +4,7 @@
 """
 
 
-def print_square(size):
+def print_square(size=3):
     """print_square
         this is a function that that print square
     """
