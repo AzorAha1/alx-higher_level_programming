@@ -8,4 +8,4 @@
 >>> add_integer(100, -2)
 98
 >>> add_integer(1.4, 2)
-3.4
+3
