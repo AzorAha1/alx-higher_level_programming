@@ -10,6 +10,6 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
 TypeError: last_name must be a string
 >>> say_my_name()
-My name is first last
+My name is 
 >>> say_my_name("Bob")
-My name is Bob last
+My name is Bob
