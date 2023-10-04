@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""function
+    this function breaks text
+"""
+
+
 def text_indentation(text="empty"):
+    """text_indentation
+        this function breaks text to next line
+    """
     in_sentence = False
     result = ""
     if not isinstance(text, str):
