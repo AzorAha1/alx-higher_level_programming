@@ -8,7 +8,7 @@ def add_integer(a, b=98):
     """add
         this function is to add
     """
-    if type(a) not in [int, float]:
+    if type(a) not in [int, float] or a == float('inf'):
         raise TypeError("a must be an integer")
     elif type(b) not in [int, float]:
         raise TypeError("b must be an integer")
