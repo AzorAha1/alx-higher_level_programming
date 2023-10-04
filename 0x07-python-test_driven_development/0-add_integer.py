@@ -12,7 +12,7 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     elif type(b) not in [int, float]:
         raise TypeError("b must be an integer")
-    return round(int(a)) + round(int(b))
+    return round(a) + round(b)
 
 
 if __name__ == "__main__":
