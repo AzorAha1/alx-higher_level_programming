@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import doctest
 """function to divide matrix
     this divides elements in a matrix
 """
@@ -16,7 +15,3 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     result = [[round(i / div, 2) for i in row] for row in matrix]
     return (result)
-
-
-if __name__ == "__main__":
-    doctest.testmod()
