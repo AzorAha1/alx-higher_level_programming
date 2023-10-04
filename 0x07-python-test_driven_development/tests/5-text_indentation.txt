@@ -7,7 +7,9 @@ empty
 >>> text_indentation("Holberton School")
 Holberton School
 >>> text_indentation("Holberton.School")
-Holberton.\\n\\nSchool
+Holberton.
+<BLANKLINE>
+School
 >>> text_indentation("Holberton.School?How are you:John")
 Holberton.
 <BLANKLINE>
