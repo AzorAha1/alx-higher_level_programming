@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""function
+    this is a function
+"""
 def add_integer(a, b=98):
     """add
         this function is to add
