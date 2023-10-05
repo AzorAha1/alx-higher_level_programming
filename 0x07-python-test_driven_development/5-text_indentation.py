@@ -15,6 +15,7 @@ def text_indentation(text="empty"):
     for character in text:
         if character == '.' or character == '?' or character == ':':
             in_sentence = False
+            result = result.rstrip()
             result += character + "\n\n"
         elif character == ' ' and not in_sentence:
             continue
