@@ -15,8 +15,7 @@ def text_indentation(text="empty"):
     for character in text:
         if character == '.' or character == '?' or character == ':':
             in_sentence = False
-            if result and result[-1] != "\n":
-                result += "\n\n"
+            result += character + "\n\n"
         elif character == ' ' and not in_sentence:
             continue
         else:
