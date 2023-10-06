@@ -21,4 +21,4 @@ def text_indentation(text="empty"):
         else:
             result += character
             in_sentence = True
-    print(result)
+    print(result, end='')
