@@ -26,6 +26,7 @@
 [-1, 0, 2, 3, 4, 5]
 >>> print(my_list)
 [4, 2, 3, 5, -1, 0]
->>> my_list.append(3000)
->>> print(my_list)
-[4, 2, 3, 5, -1, 0, 3000]
+>>> my_list.append()
+Traceback (most recent call last):
+TypeError: list.append() takes exactly one argument (0 given)
+
