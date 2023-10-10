@@ -22,10 +22,10 @@ class Rectangle(BaseGeometry):
     inherits from BaseGeometry
     """
     def __init__(self, width, height):
-        super().integer_validator(name="width", value=self.__width)
-        super().integer_validator(name="height", value=self.__height)
         self.__width = width
         self.__height = height
+        super().integer_validator(name="width", value=self.__width)
+        super().integer_validator(name="height", value=self.__height)
 
     def area(self):
         return self.__width * self.__height
