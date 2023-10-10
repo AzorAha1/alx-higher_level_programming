@@ -38,5 +38,7 @@ class Square(Rectangle):
     """Square
     """
     def __init__(self, size):
+        """init
+        """
         self._size = size
         super().__init__(size, size)
