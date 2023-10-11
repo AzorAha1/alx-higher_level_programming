@@ -13,4 +13,4 @@ with open(file=filename, mode='r'):
         mylist = []
     mylist.extend(sys.argv[1:])
 with open(file=filename, mode='w'):
-    save_to_json_file(data, filename)
+    save_to_json_file(mylist, filename)
