@@ -28,7 +28,9 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """save to file"""
+        """save to file
+        listobj
+        """
         list_objs_list = []
         with open(file="{}.json".format(cls.__name__), mode='w') as fp:
             for obj in list_objs:
