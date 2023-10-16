@@ -34,10 +34,12 @@ class Base:
         list_objs_list = []
         if list_objs is None:
             return list_objs_list
-        else:
-            with open(file="{}.json".format(cls.__name__), mode='w') as fp:
-                for obj in list_objs:
-                    list_objs_list.append(obj.to_dictionary())
+        with open(file="{}.json".format(cls.__name__), mode='w') as fp:
+            for obj in list_objs:
+                list_objs_list.append(obj.to_dictionary())
+            if list_objs is None:
+                 fp.write(cls.to_json_string(list_dictionaries=[]))
+            else:
                 fp.write(cls.to_json_string(list_dictionaries=list_objs_list))
 
     def from_json_string(json_string):
