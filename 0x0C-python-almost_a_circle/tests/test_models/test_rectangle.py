@@ -1,7 +1,13 @@
 import unittest
 from models.rectangle import Rectangle
+"""Test
+testing
+"""
 
 class TestRec(unittest.TestCase):
+    """Test Rec
+    testing my rectangle
+    """
     def test_rectangle(self):
             r1 = Rectangle(10, 12)
             r2 = Rectangle(2, 10)
