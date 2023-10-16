@@ -54,8 +54,14 @@ class Base:
     def load_from_file(cls):
         """load from file"""
         filename = cls.__name__ + ".json"
+        instancelist = []
         if not os.path.exists(filename):
-            return []
+            return instancelist
         else:
-            cls.from_json_string(filename)
-            return cls.create()
+            with open(file=filename, mode='r') as f:
+                data = f.read()
+                data = cls.from_json_string(data)
+                for onedata in data:
+                    instance = cls.create(**onedata)
+                    instancelist.append(instance)
+                return instancelist
