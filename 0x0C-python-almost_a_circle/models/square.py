@@ -11,14 +11,17 @@ class Square(Rectangle):
         super().__init__(id=id, x=x, y=y, height=size, width=size)
 
     def __str__(self):
+        """str"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
     def size(self):
+        """size"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """size"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -27,6 +30,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """update"""
         if args:
             if len(args) > 0:
                 self.id = args[0]
@@ -47,6 +51,7 @@ class Square(Rectangle):
                 self.y == kwargs['y']
 
     def to_dictionary(self):
+        """to_dictionary"""
         return {
             "id": self.id,
             "size": self.size,

@@ -19,6 +19,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """to json string"""
         if list_dictionaries is None:
             return "[]"
         else:
@@ -27,6 +28,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """save to file"""
         list_objs_list = []
         with open(file="{}.json".format(cls.__name__), mode='w') as fp:
             for obj in list_objs:
@@ -34,6 +36,7 @@ class Base:
             fp.write(cls.to_json_string(list_dictionaries=list_objs_list))
 
     def from_json_string(json_string):
+        """from json string"""
         if json_string is None:
             return []
         else:
@@ -42,12 +45,14 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """create"""
         dummy = cls(1, 2, 3, 1)
         dummy.update(**dictionary)
         return dummy
 
     @classmethod
     def load_from_file(cls):
+        """load from file"""
         filename = cls.__name__ + ".json"
         if not os.path.exists(filename):
             return []
