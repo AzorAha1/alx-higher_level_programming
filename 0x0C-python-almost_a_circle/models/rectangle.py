@@ -6,6 +6,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Rectangle
+    rectangle class inheriting from base
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         self.__width = width
@@ -19,7 +20,7 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         if not isinstance(self.__width, int):
             raise TypeError("width must be an integer")
-        if self.__height <= 0:
+        if self.__width <= 0:
             raise ValueError("width must be > 0")
         if not isinstance(self.__x, int):
             raise TypeError("x must be an integer")
