@@ -7,6 +7,8 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """Rectangle
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
         self.__width = width
         self.__height = height
@@ -94,7 +96,7 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}){self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
         if args:
@@ -119,12 +121,12 @@ class Rectangle(Base):
                 self.__x = kwargs['x']
             if 'y' in kwargs:
                 self.__y == kwargs['y']
-    
+
     def to_dictionary(self):
         return {
-            "x":self.__x,
-            "y":self.__y,
-            "id":self.id,
-            "height":self.__height,
-            "width":self.__width
+            "x": self.__x,
+            "y": self.__y,
+            "id": self.id,
+            "height": self.__height,
+            "width": self.__width
         }

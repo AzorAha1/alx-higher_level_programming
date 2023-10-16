@@ -2,6 +2,7 @@
 """class
 """
 import json
+import os
 
 
 class Base:
@@ -31,3 +32,26 @@ class Base:
             for obj in list_objs:
                 list_objs_list.append(obj.to_dictionary())
             fp.write(cls.to_json_string(list_dictionaries=list_objs_list))
+
+    def from_json_string(json_string):
+        if json_string is None:
+            return []
+        else:
+            rep = json.loads(json_string)
+        return rep
+
+    @classmethod
+    def create(cls, **dictionary):
+        dummy = cls(1, 2, 3, 1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        if not os.path.exists(filename):
+            return []
+        else:
+            cls.from_json_string(filename)
+            return cls.create()
+            
