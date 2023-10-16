@@ -1,8 +1,6 @@
 #!/bin/usr/python3
 """class that inherits
 """
-
-
 from models.base import Base
 
 
