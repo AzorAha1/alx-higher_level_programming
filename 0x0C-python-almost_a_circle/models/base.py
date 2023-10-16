@@ -52,16 +52,22 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """load from file"""
+        # here you create the file name with json extension
         filename = cls.__name__ + ".json"
-        instancelist = []
+        # create an empty list for instances
+        listofinstances = []
+        # if file doesnt exist return empty list
         if not os.path.exists(filename):
-            return instancelist
+            return listofinstances
         else:
+            # now read from the file
             with open(file=filename, mode='r') as f:
+                # now read the file and store in variable data
                 data = f.read()
-                data = cls.from_json_string(data)
-                for onedata in data:
+                # now convert data to list of json str rep
+                datalist = cls.from_json_string(data)
+                # iterate through every data in datalist set attributes
+                for onedata in datalist:
                     instance = cls.create(**onedata)
-                    instancelist.append(instance)
-                return instancelist
+                    listofinstances.append(instance)
+        return listofinstances
