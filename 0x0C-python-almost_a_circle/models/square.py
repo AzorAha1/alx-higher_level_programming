@@ -25,7 +25,7 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = value
         self.height = value
-    
+
     def update(self, *args, **kwargs):
         if args:
             if len(args) > 0:
@@ -35,7 +35,7 @@ class Square(Rectangle):
             if len(args) > 2:
                 self.x = args[2]
             if len(args) > 3:
-                self.y= args[3]
+                self.y = args[3]
         else:
             if 'id' in kwargs:
                 self.id = kwargs['id']
@@ -48,8 +48,8 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         return {
-            "id":self.id,
-            "size":self.size,
-            "x":self.x,
-            "y":self.y
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
         }

@@ -54,4 +54,3 @@ class Base:
         else:
             cls.from_json_string(filename)
             return cls.create()
-            
