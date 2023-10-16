@@ -136,7 +136,7 @@ class Rectangle(Base):
             if 'x' in kwargs:
                 self.__x = kwargs['x']
             if 'y' in kwargs:
-                self.__y == kwargs['y']
+                self.__y = kwargs['y']
 
     def to_dictionary(self):
         """to_dictionary"""
