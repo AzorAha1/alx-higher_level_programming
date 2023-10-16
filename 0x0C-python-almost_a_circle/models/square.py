@@ -1,27 +1,35 @@
 #!/usr/bin/python3
 """class
+Rectangle class
 """
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
     """Square
+    square inherits form Rectangle
     """
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(id=id, x=x, y=y, height=size, width=size)
 
     def __str__(self):
-        """str"""
+        """str
+        str
+        """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
     def size(self):
-        """size"""
+        """size
+        size getter
+        """
         return self.width
 
     @size.setter
     def size(self, value):
-        """size"""
+        """size
+        size setter
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -30,7 +38,9 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        """update"""
+        """update
+        update
+        """
         if args:
             if len(args) > 0:
                 self.id = args[0]
@@ -51,7 +61,9 @@ class Square(Rectangle):
                 self.y = kwargs['y']
 
     def to_dictionary(self):
-        """to_dictionary"""
+        """to_dictionary
+        returns dict rep
+        """
         return {
             "id": self.id,
             "size": self.size,
