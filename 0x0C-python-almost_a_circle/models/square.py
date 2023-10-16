@@ -14,7 +14,7 @@ class Square(Rectangle):
             raise TypeError("size must be an integer")
         if size <= 0:
             raise TypeError("size must be > 0")
-        super().__init__(id=id, x=x, y=y, height=size, width=size)
+        super().__init__(id=id, x=x, y=y, width=size, height=size)
 
     def __str__(self):
         """str
