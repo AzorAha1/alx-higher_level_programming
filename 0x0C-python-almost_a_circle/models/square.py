@@ -10,6 +10,10 @@ class Square(Rectangle):
     square inherits form Rectangle
     """
     def __init__(self, size, x=0, y=0, id=None):
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        if size <= 0:
+            raise TypeError("size must be > 0")
         super().__init__(id=id, x=x, y=y, height=size, width=size)
 
     def __str__(self):
