@@ -110,6 +110,3 @@ class Base:
                     instance = cls.create(**read)
                     list_ofinstances.append(instance)
         return list_ofinstances
-
-
-                
