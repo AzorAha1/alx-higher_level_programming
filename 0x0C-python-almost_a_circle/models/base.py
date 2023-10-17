@@ -3,6 +3,7 @@
 """
 import json
 import os
+import csv
 
 
 class Base:
@@ -82,3 +83,33 @@ class Base:
                     instance = cls.create(**onedata)
                     listofinstances.append(instance)
         return listofinstances
+
+    @classmethod
+    def save_to_file_csv(cls, list_obj):
+        list_obj_list = []
+        filename = cls.__name__ + ".csv"
+        if list_obj is None:
+            list_obj = []
+        else:
+            with open(file=filename, mode='w') as thefile:
+                read = csv.reader(filename)
+                list_obj_list.append(read)
+        return list_obj_list
+
+    @classmethod
+    def load_from_file_csv(cls):
+        list_ofinstances = []
+        filename = cls.__name__ + ".cvs"
+        if not os.path.exists(filename):
+            return list_ofinstances
+        else:
+            with open(file=filename, mode='r') as file:
+                reader = csv.reader(filename)
+                readerlist = cls.create(reader)
+                for read in readerlist:
+                    instance = cls.create(**read)
+                    list_ofinstances.append(instance)
+        return list_ofinstances
+
+
+                
