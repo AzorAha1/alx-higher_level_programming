@@ -1,13 +1,14 @@
-#!/usr/bin/python3
 import unittest
 from models.base import Base
-from models.rectangle import Rectangle
-"""Test
+"""
+Test
 testing
 """
 
+
 class TestBase(unittest.TestCase):
-    """TestBase
+    """
+    TestBase
     test base
     """
     def test_base(self):
@@ -23,4 +24,5 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b4.id, 12)
         self.assertEqual(b5.id, 4)
         self.assertTrue(Base(id=None))
-   
+if __name__ == "__main__":
+    unittest.main()
