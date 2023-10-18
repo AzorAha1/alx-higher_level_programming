@@ -92,21 +92,25 @@ class Base:
             list_obj = []
         else:
             with open(file=filename, mode='w') as thefile:
-                read = csv.reader(filename)
-                list_obj_list.append(read)
-        return list_obj_list
+                if cls.__name__ == 'Rectangle':
+                    csvformat = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == 'Square':
+                    csvformat = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(thefile, fieldnames=csvformat)
+                listofdicts = [obj.to_dictionary() for obj in list_obj]
+                writer.writeheader()
+                writer.writerows(listofdicts)
 
     @classmethod
     def load_from_file_csv(cls):
         list_ofinstances = []
-        filename = cls.__name__ + ".cvs"
+        filename = cls.__name__ + ".csv"
         if not os.path.exists(filename):
             return list_ofinstances
         else:
             with open(file=filename, mode='r') as file:
-                reader = csv.reader(filename)
-                readerlist = cls.create(reader)
-                for read in readerlist:
+                reader = csv.DictReader(file)
+                for read in reader:
                     instance = cls.create(**read)
                     list_ofinstances.append(instance)
         return list_ofinstances
