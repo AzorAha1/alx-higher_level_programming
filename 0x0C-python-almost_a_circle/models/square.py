@@ -10,7 +10,7 @@ class Square(Rectangle):
     square inherits form Rectangle
     """
     def __init__(self, size, x=0, y=0, id=None):
-        super().__init__(id=id, x=x, y=y, width=size)
+        super().__init__(id, x, y, size, size)
 
     def __str__(self):
         """str
