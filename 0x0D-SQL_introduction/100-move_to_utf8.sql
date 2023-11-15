@@ -1,3 +1,4 @@
+--set
 SET NAMES utf8mb4
 
 -- convert database to utf8
