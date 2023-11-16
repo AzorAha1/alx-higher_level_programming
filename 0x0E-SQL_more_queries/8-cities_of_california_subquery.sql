@@ -1,2 +1,2 @@
 -- subqueries
-SELECT cities IN hbtn_0d_usa WHERE (SELECT * WHERE name = 'California' ORDER BY cities.id ASC)
+SELECT cities IN hbtn_0d_usa WHERE state_id = (SELECT id FROM states WHERE name = 'California' ORDER BY id ASC)
