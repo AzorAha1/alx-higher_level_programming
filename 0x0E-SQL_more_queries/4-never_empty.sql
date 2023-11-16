@@ -1,2 +1,2 @@
 -- create table
-CREATE TABLE id_not_null(id = 1 INT NOT NULL, name VARCHAR(256));
+CREATE TABLE id_not_null(id INT = 1 NOT NULL, name VARCHAR(256));
