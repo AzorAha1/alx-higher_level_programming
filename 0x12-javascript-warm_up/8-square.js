@@ -10,8 +10,8 @@ if (args.length > 2) {
     console.log(row);
   }
   if (isNaN(number)) {
-    console.log('Missing Size');
+    console.log('Missing size');
   }
 } else {
-  console.log('Missing Size');
+  console.log('Missing size');
 }
