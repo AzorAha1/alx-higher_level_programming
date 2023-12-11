@@ -1,4 +1,9 @@
 #!/usr/bin/node
 const args = process.argv;
-args[3] = 'is';
-console.log(args[2], args[3], args[4]);
+if (args.length > 2) {
+  console.log(args[2], 'is', args[3]);
+} else if (args.length === 2) {
+  console.log(args[2], 'is', args[3]);
+} else {
+  console.log(args[2], 'is', args[3]);
+}
