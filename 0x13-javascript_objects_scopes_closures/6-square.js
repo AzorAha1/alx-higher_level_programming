@@ -3,11 +3,7 @@
 const LastSquare = require('./5-square');
 
 class Square extends LastSquare {
-  constructor (size) {
-    super(size, size);
-    this.size = size;
-  }
-
+  
   charPrint (c) {
     for (let i = 0; i < this.size; i++) {
       let row = '';
