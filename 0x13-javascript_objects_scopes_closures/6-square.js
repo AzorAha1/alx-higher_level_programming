@@ -11,11 +11,12 @@ class Square extends LastSquare {
     for (let i = 0; i < this.size; i++) {
       let row = '';
       for (let j = 0; j < this.size; j++) {
-        if (c !== undefined) {
-          row += c;
-        } else if (c === undefined) {
-          row += 'X';
-        }
+        // if (c !== undefined) {
+        //   row += c;
+        // } else if (c === undefined) {
+        //   row += 'X';
+        // }
+        row +=c !== undefined ? c : 'X';
       }
       console.log(row);
     }
