@@ -1,0 +1,1 @@
+read me file for js objects scopes closures
