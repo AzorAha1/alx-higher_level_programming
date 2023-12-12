@@ -12,7 +12,7 @@ class Square extends Rectangle {
     for (let i = 0; i < this.size; i++) {
       let row = '';
       for (let j = 0; j < this.size; j++) {
-        if (c != undefined) {
+        if (c !== undefined) {
           row += 'C';
         } else if (c === undefined) {
           row += 'X';
