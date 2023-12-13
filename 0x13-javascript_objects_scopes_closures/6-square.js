@@ -13,7 +13,7 @@ class Square extends LastSquare {
       for (let j = 0; j < this.size; j++) {
         if (c !== undefined) {
           row += c;
-        } else if (c === undefined) {
+        } else {
           row += 'X';
         }
       }
