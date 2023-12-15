@@ -18,8 +18,7 @@ def list_states_filter():
     q = f'select * from states where name like "N%"'
     cursor = database.cursor()
     cursor.execute(q)
-    rows = cursor.fetchall()
-    for row in rows:
+    for row in cursor:
         print(row)
     cursor.close()
     database.close()
