@@ -3,7 +3,7 @@
 
 
 def list_states_filter_states():
-    """function to list all states"""
+    """function to list all states with filter"""
     import sys
     import MySQLdb
     username = sys.argv[1]
