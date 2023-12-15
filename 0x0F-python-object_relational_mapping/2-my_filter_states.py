@@ -17,7 +17,7 @@ def list_states_filter_states():
         database=database, port=3306
         )
     q = f'select * from states' \
-        f" where name='{sname}' COLLATE utf8mb4_bin order by states.id ASC"
+        f' where name="{sname}" COLLATE utf8mb4_bin order by states.id ASC'
     cursor = database.cursor()
     cursor.execute(q)
     rows = cursor.fetchall()
