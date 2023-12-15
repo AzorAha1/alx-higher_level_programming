@@ -28,7 +28,7 @@ def list_cities_filter_safe():
         concatcities = ', '.join(cities)
         print(concatcities)
     else:
-        print(" ")
+        print("")
     cursor.close()
     database.close()
 
