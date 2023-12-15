@@ -23,8 +23,9 @@ def list_cities_filter_safe():
     cursor = database.cursor()
     cursor.execute(q, (sn,))
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    if rows:
+        nameofcities = ', '.join(row[0] for row in rows)
+        print(nameofcities)
     cursor.close()
     database.close()
 
