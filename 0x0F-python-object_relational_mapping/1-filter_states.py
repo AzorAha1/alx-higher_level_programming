@@ -16,9 +16,9 @@ def list_states_filter():
             password=password,
             database=database, port=3306
             )
-        query = f'select * from states where name like "N%" order by states.id ASC'
+        q = f'select * from states where name like "N%" order by states.id ASC'
         cursor = database.cursor()
-        cursor.execute(query)
+        cursor.execute(q)
         rows = cursor.fetchall()
         for row in rows:
             print(row)
