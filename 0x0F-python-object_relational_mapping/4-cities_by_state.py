@@ -17,7 +17,10 @@ def list_all_cities():
         password=password,
         port=3306
     )
-    query = f'select * from cities order by cities.id ASC'
+    query = f'SELECT cities.id, cities.name, states.name ' \
+            f'FROM cities ' \
+            f'INNER JOIN states ' \
+            f'ON cities.state_id = states.id'
     cursor = database.cursor()
     cursor.execute(query)
     rows = cursor.fetchall()
