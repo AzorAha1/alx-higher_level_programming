@@ -2,7 +2,7 @@
 """list all states from database(hbtn_0e_0_usa)"""
 
 
-def list_states_filter_safe():
+def list_cities_filter_safe():
     """function to list all states with filter"""
     import sys
     import MySQLdb
@@ -28,4 +28,4 @@ def list_states_filter_safe():
 
 
 if __name__ == "__main__":
-    list_states_filter_safe()
+    list_cities_filter_safe()
