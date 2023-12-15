@@ -3,7 +3,7 @@
 
 
 def list_cities_filter_safe():
-    """function to list all states with filter"""
+    """function to list all cities with filter"""
     import sys
     import MySQLdb
     username = sys.argv[1]
@@ -16,8 +16,10 @@ def list_cities_filter_safe():
         password=password,
         database=database, port=3306
         )
-    q = 'select * from cities ' \
-        'where name=%s COLLATE utf8mb4_bin order by cities.id ASC'
+    q = f'select name from cities ' \
+        f'where cities.state_id in ' \
+        f'(select states.id from states where name = %s)' \
+        f'order by cities.id ASC'
     cursor = database.cursor()
     cursor.execute(q, (sn,))
     rows = cursor.fetchall()
