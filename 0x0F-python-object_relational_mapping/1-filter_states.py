@@ -15,7 +15,8 @@ def list_states_filter():
         password=password,
         database=database, port=3306
         )
-    q = f'select * from states where name like "N%" COLLATE utf8mb4_bin order by states.id ASC'
+    q = f'select * from states
+    where name like "N%" COLLATE utf8mb4_bin order by states.id ASC'
     cursor = database.cursor()
     cursor.execute(q)
     rows = cursor.fetchall()
