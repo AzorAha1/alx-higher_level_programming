@@ -9,7 +9,7 @@ def list_states_filter_states():
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    sname = sys.argv[4]
+    sn = sys.argv[4]
     database = MySQLdb.connect(
         host='localhost',
         user=username,
@@ -17,7 +17,7 @@ def list_states_filter_states():
         database=database, port=3306
         )
     q = 'select * from states ' \
-        'where name="{}" COLLATE utf8mb4_bin order by states.id ASC'.format(sname)
+        'where name="{}" COLLATE utf8mb4_bin order by states.id ASC'.format(sn)
     cursor = database.cursor()
     cursor.execute(q)
     rows = cursor.fetchall()
