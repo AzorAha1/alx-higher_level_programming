@@ -16,10 +16,11 @@ def list_state_obj_first():
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    allstates = session.query(State).order_by(State.id).all()
-    if allstates:
-        first = allstates[0]
+    first = session.query(State).order_by(State.id).first()
+    if first:
         print(f'{first.id}: {first.name}')
+    else:
+        print()
 
 
 if __name__ == "__main__":
