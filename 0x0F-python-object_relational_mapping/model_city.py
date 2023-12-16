@@ -8,6 +8,7 @@ Base = declarative_base()
 
 
 class City(Base):
+    """City model"""
     __tablename__ = 'cities'
     id = Column(Integer, autoincrement=True, primary_key=True)
     name = Column(String(128), nullable=False)
