@@ -20,7 +20,7 @@ def list_state_obj_first():
     if first:
         print(f'{first.id}: {first.name}')
     else:
-        print("\n")
+        print("Nothing")
 
 
 if __name__ == "__main__":
