@@ -20,7 +20,7 @@ def city_fetch_by_state():
     objs = session.query(State.name, City.id, City.name) \
         .join(State, State.id == City.state_id).order_by(City.id)
     for obj in objs:
-        print(f'{obj[0]}: ({obj.id}) {obj.name}')
+        print(f'{obj[0]}: ({obj[1]}) {obj[2]}')
 
 
 if __name__ == "__main__":
