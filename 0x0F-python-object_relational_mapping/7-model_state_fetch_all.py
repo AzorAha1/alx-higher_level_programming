@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
+"""this is a function"""
+
+
+def list_state_obj():
+    """list all state objects"""
     import sys
     from sqlalchemy import create_engine
     from model_state import Base, State
@@ -15,3 +19,7 @@ if __name__ == "__main__":
     allstates = session.query(State).order_by(State.id).all()
     for state in allstates:
         print(f'{state.id}: {state.name}')
+
+
+if __name__ == "__main__":
+    list_state_obj()
