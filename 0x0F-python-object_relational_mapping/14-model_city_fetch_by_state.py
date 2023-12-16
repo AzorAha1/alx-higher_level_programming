@@ -7,7 +7,7 @@ def city_fetch_by_state():
     import sys
     from sqlalchemy import create_engine
     from model_state import Base, State
-    from model_city import City
+    from model_city import Base, City
     from sqlalchemy.orm import sessionmaker
     username = sys.argv[1]
     password = sys.argv[2]
