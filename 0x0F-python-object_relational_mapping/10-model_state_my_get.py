@@ -23,7 +23,7 @@ def list_state_obj_with_name():
         for fn in filter_name:
             print(fn.id)
     else:
-        print('Not Found')
+        print('Not found')
 
 
 if __name__ == "__main__":
