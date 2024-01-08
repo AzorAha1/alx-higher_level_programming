@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# this will fetch a certain site
+# this will fetch a certain siterjeffjekfea;fe;akfe;fkew;afk;ekf;kfekfawe;fe
 import urllib.request
 with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
     body = response.read()
