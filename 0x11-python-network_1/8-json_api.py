@@ -8,10 +8,11 @@ if __name__ == "__main__":
     response = requests.post(url='http://0.0.0.0:5000/search_user', data=data)
     try:
         json_code = response.json()
+        if not json_code:
+            print('No result')
+        else:
+            print(f"[{json_code.get('id')}] {json_code.get('name')}")
     except ValueError:
         print("Not a valid JSON")
-    if not json_code:
-        print('No result')
-    else:
-        print(f"[{json_code.get('id')}] {json_code.get('name')}")
+    
 
