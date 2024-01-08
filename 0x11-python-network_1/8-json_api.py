@@ -19,7 +19,7 @@ if __name__ == "__main__":
     if json_code == {}:
         print('No result')
     else:
-        print(f"[{response.get('id')}] {response.get('name')}")
+        print(f"[{json_code.get('id')}] {json_code.get('name')}")
     
     
     
