@@ -7,4 +7,4 @@ if __name__ == "__main__":
     email = sys.argv[2]
     data = {'email': email}
     with requests.post(url=url, data=data) as response:
-        print(response)
+        print(response.text)
