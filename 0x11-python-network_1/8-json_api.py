@@ -3,14 +3,8 @@
 if __name__ == "__main__":
     import requests
     import sys
-    if len(sys.argv) < 2:
-        letter = ""  
-    else: 
-        letter = sys.argv[1]
-    if letter:
-        data = {'q':letter}
-    else:
-        data = {'q':""}
+    letter = "" if len(sys.argv) < 2 else sys.argv[1]
+    letter = data = {'q': letter} if letter else {'q': ""}
     response = requests.post(data=data, url='http://0.0.0.0:5000/search_user')
     try:
         json_code = response.json();
