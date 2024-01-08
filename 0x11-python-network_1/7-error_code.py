@@ -9,4 +9,4 @@ if __name__ == "__main__":
             print(response.text)
     except requests.HTTPError as errror:
         if requests.status_codes >= 400:
-            print(f'Error code: {errror.errno}')
+            print(f'Error code: {errror.response.status_code}')
