@@ -10,4 +10,4 @@ if __name__ == "__main__":
     paramset = urllib.parse.urlencode({'email':email}).encode('utf-8')
     request_type = urllib.request.Request(url=url, data=paramset,method='POST')
     with urllib.request.urlopen(request_type) as response:
-        print(response.read().decode)
+        print(response.read().decode('utf-8'))
