@@ -4,8 +4,9 @@ if __name__ == "__main__":
     import requests
     import sys
     if len(sys.argv) < 2:
-        letter = ""   
-    letter = sys.argv[1]
+        letter = ""  
+    else: 
+        letter = sys.argv[1]
     if letter:
         data = {'q':letter}
     else:
