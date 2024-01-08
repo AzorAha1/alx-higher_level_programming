@@ -2,10 +2,11 @@
 """take url send request and display body with status code & error handling"""
 if __name__ == "__main__":
     import requests
-    import sys
+    import sys        
     letter = sys.argv[1]
-    data = {'q':letter}
-    if not letter:
+    if letter:
+        data = {'q':letter}
+    else:
         data = {'q':""}
     response = requests.post(data=data, url='http://0.0.0.0:5000/search_user')
     try:
