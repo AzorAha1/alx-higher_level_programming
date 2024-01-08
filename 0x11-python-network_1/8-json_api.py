@@ -14,5 +14,3 @@ if __name__ == "__main__":
             print(f"[{json_code.get('id')}] {json_code.get('name')}")
     except ValueError:
         print("Not a valid JSON")
-    
-
