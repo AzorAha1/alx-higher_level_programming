@@ -8,9 +8,9 @@ with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
     content = f"- content: {body}"
     utf8_content = f"- utf8 content: {body}"
     print(f'''
-    Body response:
-        {type}
-        {content}
-        {utf8_content}
-    ''' 
-    )
+Body response:
+    {type}
+    {content}
+    {utf8_content}
+'''.strip()
+)
