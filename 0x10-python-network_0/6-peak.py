@@ -9,4 +9,3 @@ def find_peak(list_of_integers):
     for i in range(lenoflist):
         if (nums[i] >= nums[i - 1]) and (nums[i] >= nums[i + 1]):
             return nums[i]
-
