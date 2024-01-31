@@ -9,11 +9,12 @@ request.get(url, (error, response, body) => {
     const data = JSON.parse(body);
     const counter = {};
     data.forEach(element => {
-      if (!counter[element.userId]) {
-        counter[element.userId] = 0;
-      }
       if (element.completed === true) {
-        counter[element.userId]++;
+        if (!counter[element.userId]) {
+          counter[element.userId] = 1;
+        } else {
+          counter[element.userId]++;
+        }
       }
     });
     console.log(counter);
